@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result - {{ algo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ {{ algo.replace('_', ' ').title() }} Result</h1>
+        <ol class="steps">
+            {% for step in steps %}
+                <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+        <a href="/" class="back-btn">🔙 Try Another</a>
+    </div>
+</body>
+</html>

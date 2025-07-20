@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 DSA Sorting Visualizer</h1>
+        <form action="/visualize" method="POST">
+            <label for="array">Enter Array (comma-separated):</label>
+            <input type="text" name="array" placeholder="e.g. 5,2,9,1,5,6" required>
+
+            <label for="algorithm">Choose Algorithm:</label>
+            <select name="algorithm" required>
+                <option value="bubble_sort">Bubble Sort</option>
+                <option value="insertion_sort">Insertion Sort</option>
+                <option value="selection_sort">Selection Sort</option>
+                <option value="merge_sort">Merge Sort</option>
+                <option value="quick_sort">Quick Sort</option>
+                <option value="radix_sort">Radix Sort</option>
+            </select>
+
+            <button type="submit">Visualize 🚀</button>
+        </form>
+    </div>
+</body>
+</html>
