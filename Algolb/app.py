@@ -150,6 +150,8 @@ def visualize():
 
     return render_template('result.html', steps=steps, algo=algo)
 
-# ----------- START SERVER ----------- #
-if __name__ == '__main__':
-    app.run(debug=True)
+import os
+
+if _name_ == "_main_":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)
